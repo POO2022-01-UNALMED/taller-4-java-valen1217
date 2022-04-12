@@ -6,43 +6,42 @@ public class Asignatura {
     String n = nombre;
     int codigoInterno;
     int codigoExterno;
-    Tipo tipo;
 
     Asignatura() {
-        this("Sin nombre",Tipo.FUNDAMENTACION);
-        this(0);
+        this("Sin nombre");
+       // this(0);
     }
 
-    Asignatura(int codigoInterno,Tipo tipo) {
-        this("Sin nombre", codigoInterno, 0,tipo);
+    //AQUÍ
+    Asignatura(int codigoInterno, String nombre) {
+        this(nombre, codigoInterno, 0);
     }
 
-    Asignatura(int codigoExterno,Tipo tipo) {
-        this("Sin nombre", 0, codigoExterno,tipo);
+    Asignatura(int codigoExterno) {
+        this("Sin nombre", 0, codigoExterno);
     }
 
-    Asignatura(String nombre, Tipo tipo) {
-        this(nombre, 0, 0,tipo);
+    Asignatura(String nombre) {
+        this(nombre, 0, 0);
     }
 
-    Asignatura(String nombre, int codigoInterno, int codigoExterno,Tipo tipo) {
+    Asignatura(String nombre, int codigoInterno, int codigoExterno) {
         this.nombre = nombre;
         this.codigoInterno = codigoInterno;
         this.codigoExterno = codigoExterno;
-        this.tipo = tipo;
     }
 
-    void cambiarDatos(int codigoInterno, int codigoExterno, String nombre,Tipo tipo) {
+    void cambiarDatos(int codigoInterno, int codigoExterno, String nombre) {
         this.codigoInterno = codigoInterno;
         this.codigoExterno = codigoExterno;
         this.nombre = nombre;
-        this.tipo = tipo;
     }
 
-    void cambiarDatos(int codigoInterno) {
+    void cambiarDatos(int codigoInterno, String nombre) {
         this.codigoInterno = codigoInterno;
     }
 
+    //Aquí
     void cambiarDatos(int codigoExterno) {
         this.codigoExterno = codigoExterno;
     }
